@@ -1,0 +1,55 @@
+{
+  "mcpServers": {
+    "exa": {
+      "type": "http",
+      "url": "https://mcp.exa.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer ${EXA_API_KEY}"
+      }
+    }
+  },
+  "_commented_optionals": {
+    "_note": "Uncomment any of these into mcpServers above as you wire additional MCPs. Full setup guide for 12 connectors in .claude/connections.md.",
+    "ga4": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@google/mcp-ga4"],
+      "env": {
+        "GA4_PROPERTY_ID": "${GA4_PROPERTY_ID}",
+        "GA4_CREDENTIALS_JSON": "${GA4_CREDENTIALS_JSON}"
+      }
+    },
+    "gsc": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@google/mcp-gsc"],
+      "env": {
+        "GSC_SITE_URL": "${GSC_SITE_URL}",
+        "GSC_CREDENTIALS_JSON": "${GSC_CREDENTIALS_JSON}"
+      }
+    },
+    "granola": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@granola/mcp-server"],
+      "env": {
+        "GRANOLA_API_KEY": "${GRANOLA_API_KEY}"
+      }
+    },
+    "slack": {
+      "type": "http",
+      "url": "https://mcp.slack.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SLACK_BOT_TOKEN}"
+      }
+    },
+    "firecrawl": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@firecrawl/mcp-server"],
+      "env": {
+        "FIRECRAWL_API_KEY": "${FIRECRAWL_API_KEY}"
+      }
+    }
+  }
+}

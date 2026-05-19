@@ -1,0 +1,40 @@
+# Marketing OS — environment variables
+#
+# Copy this file to .env and fill in real values. .env is gitignored so secrets stay local.
+# This file (`env`, no extension, no leading dot) is committed as a template so anyone cloning
+# the repo can see what they need to set without it being hidden as a dotfile.
+#
+# Only EXA_API_KEY is required for the 15-minute tour. Other MCPs are commented out in .mcp.json
+# and only need their env vars set when you uncomment those MCPs.
+# Full 12-connector setup guide: .claude/connections.md
+
+# === REQUIRED ===
+
+# Exa API key — for web search + page fetch via the Exa MCP
+# Get yours at: https://exa.ai (free tier OK)
+EXA_API_KEY=
+
+# === OPTIONAL — uncomment as you wire each MCP ===
+
+# Google Analytics 4
+# Property ID is in your GA4 admin panel (looks like "properties/123456789")
+# Credentials JSON is from a Google Cloud service account with GA4 access
+# GA4_PROPERTY_ID=
+# GA4_CREDENTIALS_JSON=
+
+# Google Search Console
+# Site URL exactly matches the verified property in GSC (e.g., "sc-domain:yourdomain.com")
+# GSC_SITE_URL=
+# GSC_CREDENTIALS_JSON=
+
+# Granola — meeting transcripts
+# Get API key from your Granola account settings
+# GRANOLA_API_KEY=
+
+# Slack — team notifications + channel reads
+# Bot token starts with "xoxb-"; install Slack app via api.slack.com first
+# SLACK_BOT_TOKEN=
+
+# Firecrawl — heavy web crawl
+# Get API key from firecrawl.dev
+# FIRECRAWL_API_KEY=

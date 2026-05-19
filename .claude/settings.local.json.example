@@ -1,0 +1,15 @@
+{
+  "_note": "Copy this file to settings.local.json (gitignored) if you want machine-specific Claude Code settings. Most users don't need this — the defaults work fine. Settings here override the repo defaults locally without affecting teammates.",
+  "permissions": {
+    "_note": "Add tools that should be pre-allowed without prompting on this machine. Example below allows Bash for git commands; uncomment + customize as needed.",
+    "allow_examples": [
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)"
+    ]
+  },
+  "env_example": {
+    "_note": "If you have machine-specific env vars not appropriate for .env (which is shared in team setups), put them here. Most users don't need this.",
+    "EXAMPLE_VAR": "example-value"
+  }
+}
